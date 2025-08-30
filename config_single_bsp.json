@@ -1,0 +1,38 @@
+{
+  "strategy_type": "single_bsp",
+  "stocks": [
+    "sz.000001",
+    "sz.000002",
+    "sz.000004",
+    "sz.000006",
+    "sz.000158",
+    "sz.000858",
+    "sz.000999",
+    "sz.002142",
+    "sz.002415",
+    "sz.300750"
+  ],
+  "strategy_config": {
+    "kl_type": "K_DAY",
+    "bs_type": "2b",
+    "start_time": "2023-01-01",
+    "recent_n_klines": 10,
+    "data_src": "BAO_STOCK",
+    "print_warning": false
+  },
+  "notes": {
+    "strategy_desc": "缠论单单周期单买卖点策略",
+    "configuration_notes": {
+      "kl_type": "K线级别，可选: K_DAY(日线), K_30M(30分钟), K_60M(60分钟)等",
+      "bsp_type": "买卖点类型，可选: 1b(一类买点), 2b(二类买点), 3b(三类买点), 1s(一类卖点), 2s(二类卖点), 3s(三类卖点)",
+      "start_time": "获取K线数据的起始时间",
+      "recent_n_klines": "在最近的N根K线内出现的买卖点",
+      "data_src": "数据源，可选: BAO_STOCK, CCXT, CSV"
+    },
+    "usage_examples": [
+      "日线出现二类买点: kl_type=K_DAY, bsp_type=2b",
+      "30分钟级别出现一买点: kl_type=K_30M, bsp_type=1b",
+      "最近5根日线出现三类卖点: kl_type=K_DAY, bsp_type=3s, recent_n_klines=5"
+    ]
+  }
+}
