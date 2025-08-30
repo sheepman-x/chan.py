@@ -1,8 +1,3 @@
-# 环境
-python -m venv chan-env
-source chan-env/bin/activate
- pip install -r Script/requirements.txt
-
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
@@ -170,3 +165,7 @@ python main.py
 2. Use CChanConfig with print_warning=True for debugging
 3. Access intermediate calculations via CChan[KL_TYPE] properties
 4. For visual debugging: set trigger_step=True and use CAnimateDriver
+
+
+# 开发要求
+1、严格按照指示实现代码，只遵循最小原则，不要出现任何指示以外的功能和代码
